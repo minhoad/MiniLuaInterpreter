@@ -1,4 +1,4 @@
-/*package interpreter.expr;
+package interpreter.expr;
 
 public class TableEntry extends TableExpr{
     public Expr key;
@@ -7,4 +7,4 @@ public class TableEntry extends TableExpr{
     public TableEntry(int line){
         super(line);
     }
-}*/
+}

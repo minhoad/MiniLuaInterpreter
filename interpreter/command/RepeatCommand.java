@@ -1,6 +1,7 @@
 package interpreter.command;
 
 import interpreter.expr.Expr;
+import interpreter.value.Value;
 
 public class RepeatCommand extends Command{
     private Command cmds;
@@ -14,6 +15,7 @@ public class RepeatCommand extends Command{
 
     @Override
     public void execute(){
-
+        Value<?> value = expr.expr();
+        while (value != null && ! value.eval())cmds.execute();
     }
 }

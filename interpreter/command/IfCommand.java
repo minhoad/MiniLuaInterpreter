@@ -20,6 +20,11 @@ public class IfCommand extends Command{
 
     @Override
     public void execute(){
-        //TODO
+        if(expr.expr().eval()){ 
+            thenCmds.execute();
+        }
+        else if(elseCmds != null){
+            elseCmds.execute();
+        }
     }
 }
